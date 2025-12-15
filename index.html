@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SL Travel & Tours</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <h1 class="text-2xl font-bold text-blue-600">SL Travel</h1>
+      <ul class="flex space-x-6 font-medium">
+        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600">About</a></li>
+        <li><a href="#tours" class="hover:text-blue-600">Tours</a></li>
+        <li><a href="#booking" class="hover:text-blue-600">Booking</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center hero-bg">
+    <div class="text-center text-white px-4" data-aos="fade-up">
+      <h2 class="text-5xl font-bold mb-4">Explore India With Comfort</h2>
+      <p class="text-xl mb-6">Premium Tours • Trusted Travel Partner</p>
+      <a href="#booking" class="bg-blue-600 px-8 py-3 rounded-full text-white text-lg hover:bg-blue-700 transition">
+        Book Your Trip
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20 max-w-7xl mx-auto px-6" data-aos="fade-up">
+    <h3 class="text-4xl font-bold mb-6 text-center">About Us</h3>
+    <p class="text-center max-w-3xl mx-auto text-lg">
+      SL Travel & Tours provides reliable, affordable, and comfortable travel solutions.
+      From family trips to corporate tours, we ensure a smooth journey every time.
+    </p>
+  </section>
+
+  <!-- TOURS -->
+  <section id="tours" class="py-20 bg-gray-50">
+    <div class="grid md:grid-cols-3 gap-8">
+
+  <div class="tour-card" data-aos="zoom-in">
+    <img src="./assets/images/img1.png" class="rounded-xl mb-4 h-48 w-full object-cover">
+    <h4 class="text-2xl font-semibold mb-2">Sedan</h4>
+    <p>Vadodara → Surat</p>
+    <p class="font-semibold text-blue-600 mt-2">₹3,500</p>
+  </div>
+
+  <div class="tour-card" data-aos="zoom-in" data-aos-delay="100">
+    <img src="./assets/images/img2.png" class="rounded-xl mb-4 h-48 w-full object-cover">
+    <h4 class="text-2xl font-semibold mb-2">SUV</h4>
+    <p>Vadodara → Surat</p>
+    <p class="font-semibold text-blue-600 mt-2">₹4,500</p>
+  </div>
+
+  <div class="tour-card" data-aos="zoom-in" data-aos-delay="200">
+    <img src="./assets/images/img3.png" class="rounded-xl mb-4 h-48 w-full object-cover">
+    <h4 class="text-2xl font-semibold mb-2">Innova Crysta</h4>
+    <p>Vadodara → Surat</p>
+    <p class="font-semibold text-blue-600 mt-2">₹5,500</p>
+  </div>
+
+  <div class="tour-card" data-aos="zoom-in">
+    <img src="./assets/images/img4.png" class="rounded-xl mb-4 h-48 w-full object-cover">
+    <h4 class="text-2xl font-semibold mb-2">Tempo Traveller</h4>
+    <p>Vadodara → Surat</p>
+    <p class="font-semibold text-blue-600 mt-2">₹7,500</p>
+  </div>
+
+  <div class="tour-card" data-aos="zoom-in">
+    <img src="./assets/images/img5.png" class="rounded-xl mb-4 h-48 w-full object-cover">
+    <h4 class="text-2xl font-semibold mb-2">Luxury Car</h4>
+    <p>Vadodara → Surat</p>
+    <p class="font-semibold text-blue-600 mt-2">₹9,500</p>
+  </div>
+
+</div>
+
+
+
+  </section>
+
+  <!-- BOOKING (Calendar Placeholder) -->
+  <section id="booking" class="py-20 max-w-5xl mx-auto px-6" data-aos="fade-up">
+  <h3 class="text-4xl font-bold mb-10 text-center">Book Your Ride</h3>
+
+  <div class="bg-white shadow-2xl rounded-2xl p-8 grid md:grid-cols-2 gap-6">
+
+    <!-- FROM -->
+    <!-- FROM -->
+<div>
+  <label class="block mb-2 font-medium">From</label>
+  <select id="fromCity" class="form-input">
+    <option value="">Select city</option>
+    <option value="Vadodara">Vadodara</option>
+    <option value="Surat">Surat</option>
+    <option value="Ahmedabad">Ahmedabad</option>
+  </select>
+</div>
+
+<!-- TO -->
+<div>
+  <label class="block mb-2 font-medium">To</label>
+  <select id="toCity" class="form-input">
+    <option value="">Select city</option>
+    <option value="Surat">Surat</option>
+    <option value="Vadodara">Vadodara</option>
+    <option value="Ahmedabad">Ahmedabad</option>
+  </select>
+</div>
+
+
+    <!-- DATE -->
+    <div>
+      <label class="block mb-2 font-medium">Travel Date</label>
+      <input type="date" id="travelDate" class="form-input">
+    </div>
+
+    <!-- VEHICLE -->
+    <div>
+      <label class="block mb-2 font-medium">Vehicle Type</label>
+      <select id="vehicleType" class="form-input">
+        <option value="">Select vehicle</option>
+        <option value="sedan">Sedan</option>
+        <option value="suv">SUV</option>
+        <option value="innova">Innova Crysta</option>
+        <option value="tempo">Tempo Traveller</option>
+        <option value="luxury">Luxury Car</option>
+      </select>
+    </div>
+
+    <!-- ESTIMATE BUTTON -->
+    <div class="md:col-span-2">
+      <button onclick="calculatePrice()"
+        class="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition text-lg">
+        Get Price Estimate
+      </button>
+    </div>
+
+    <!-- RESULT -->
+    <div id="estimateResult" class="md:col-span-2 hidden bg-gray-50 rounded-xl p-6 text-center">
+      <p class="text-lg mb-2">Estimated Distance: <strong id="km"></strong> km</p>
+      <p class="text-2xl font-bold text-blue-600">Estimated Price: ₹<span id="price"></span></p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-6" data-aos="fade-up">
+      <h3 class="text-4xl font-bold mb-6 text-center">Inquiry Form</h3>
+
+      <form class="bg-white shadow-xl rounded-xl p-8 space-y-4">
+        <input type="text" placeholder="Full Name" class="form-input">
+        <input type="email" placeholder="Email Address" class="form-input">
+        <input type="text" placeholder="Destination" class="form-input">
+        <textarea placeholder="Message" class="form-input h-32"></textarea>
+        <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+          Send Inquiry
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    © 2025 SL Travel & Tours. All Rights Reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
