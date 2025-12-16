@@ -72,3 +72,69 @@ function calculatePrice() {
 
   document.getElementById("estimateResult").classList.remove("hidden");
 }
+function switchTab(type) {
+  const buttons = document.querySelectorAll(".tab-btn");
+  buttons.forEach(btn => btn.classList.remove("active-tab"));
+
+  event.target.classList.add("active-tab");
+
+  const form = document.getElementById("bookingForm");
+
+  if (type === "round") {
+    form.innerHTML = `
+      <input type="text" placeholder="Pickup Location" class="form-input">
+      <input type="text" placeholder="Drop Location" class="form-input">
+
+      <div class="grid grid-cols-2 gap-4">
+        <input type="date" class="form-input">
+        <input type="time" class="form-input">
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <input type="date" class="form-input">
+        <input type="time" class="form-input">
+      </div>
+
+      <input type="tel" placeholder="Mobile Number" class="form-input">
+
+      <button class="w-full bg-orange-500 text-white py-3 rounded-xl font-semibold">
+        Check Rates
+      </button>
+    `;
+  }
+
+  if (type === "oneway") {
+    form.innerHTML = `
+      <input type="text" placeholder="Pickup Location" class="form-input">
+      <input type="text" placeholder="Drop Location" class="form-input">
+
+      <div class="grid grid-cols-2 gap-4">
+        <input type="date" class="form-input">
+        <input type="time" class="form-input">
+      </div>
+
+      <input type="tel" placeholder="Mobile Number" class="form-input">
+
+      <button class="w-full bg-orange-500 text-white py-3 rounded-xl font-semibold">
+        Check One Way Rates
+      </button>
+    `;
+  }
+
+  if (type === "local") {
+    form.innerHTML = `
+      <input type="text" placeholder="City" class="form-input">
+
+      <div class="grid grid-cols-2 gap-4">
+        <input type="date" class="form-input">
+        <input type="time" class="form-input">
+      </div>
+
+      <input type="tel" placeholder="Mobile Number" class="form-input">
+
+      <button class="w-full bg-orange-500 text-white py-3 rounded-xl font-semibold">
+        Check Local Packages
+      </button>
+    `;
+  }
+}
